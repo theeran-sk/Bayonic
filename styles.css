@@ -1,0 +1,355 @@
+/* html {
+    scroll-behavior: smooth;
+} */
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Delayed start */
+}
+
+[data-animate="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="fade-up"].in-viewport {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #333;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin-right: 50px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #007aff;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 15rem;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #333;
+}
+
+.highlight {
+    color: #007aff;
+    font-size: 20rem;
+}
+
+.quote {
+    font-size: 30px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.about {
+    background-color: rgb(33, 57, 90);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.about-text {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+}
+
+#mission {
+    margin-top: 100px;
+}
+
+#info {
+    padding-bottom: 250px;
+}
+
+.register, #register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#register-header {
+    font-size: 4rem;
+    margin-top: 150px;
+    color: #007aff;
+    margin-bottom: 25px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 20px;
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.course-register {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.available-courses, .sign-up {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+#available-courses-header, #sign-up-header {
+    font-size: 2rem;
+    color: #333;
+}
+
+.available-courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.available-courses-table th, .available-courses-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.available-courses-table th {
+    background-color: #f2f2f2;
+}
+
+.sign-up-page {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.name-section, .email-section {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-section label, .email-section label {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+}
+
+.name-section input, .email-section input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+}
+
+.email-section input {
+    margin-bottom: none;
+    padding-bottom: none;
+}
+
+#submit {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Space Grotesk';
+    margin-bottom: 25px;
+}
+
+#submit {
+    background-color: rgb(128, 224, 154);
+    color: white;
+}
+
+#submit:hover {
+    background-color: rgb(107, 189, 127);
+}
+
+.contact {
+    background-color: rgb(33, 57, 90);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.contact-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    padding-bottom: 50px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact label {
+    text-align: left;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.contact input,
+.contact textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    resize: vertical;
+    max-height: 300px;
+    min-height: 25px;
+}
+
+.contact button {
+    padding: 12px 24px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Space Grotesk';
+}
+
+.contact button:hover {
+    background-color: #005bb5;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+#alert-text{
+    color: lightcoral;
+}
+
