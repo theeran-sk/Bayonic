@@ -116,35 +116,29 @@ nav .nav-links li a:hover {
     background-color: rgb(33, 57, 90);
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    padding-left: 100px;
+    
 }
 
 .quadrant {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     width: 50%;
     height: 50%;
-    box-sizing: border-box;
-    padding: 10px;
+
 }
 
 .about-text {
     color: white;
-    text-align: center;
     padding: 20px;
     font-size: 1.25rem;
     line-height: 2;
 }
 
-#mission {
-    margin-top: 90px;
-}
-
-#info {
-    padding-bottom: 250px;
+.about-text h2{
+    text-align: center;
 }
 
 .register, #register {

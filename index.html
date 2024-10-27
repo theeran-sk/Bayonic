@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,45 +14,55 @@
     <script src="script.js" defer></script>
     <script src="courses.js" defer></script>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
-            <img src="bayonic.png" alt="Bayonic">
-            <p>Bayonic.ai</p>
+            <a href="#home" style="display: flex; text-decoration: none;">
+                <img src="bayonic.png" alt="Bayonic">
+                <p>Bayonic.ai</p>
+            </a>
         </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#register">Student Registration</a></li>
+                <li><a href="#register">Registration</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section id="home" class="home">
         <h1 class="title" data-animate="fade-up">
             b<span class="highlight">A</span>yon<span class="highlight">I</span>c
         </h1>
         <p class="quote" data-animate="fade-up">Explore the bay of knowledge where AI meets aeonic innovation.</p>
     </section>
-    
+
     <section id="about" class="about">
         <div class="quadrant" data-animate="fade-up" id="mission">
             <div class="about-text">
                 <h2>Our Mission</h2>
-                <p>We're a team of high schoolers from the Bay Area with a passion for machine learning. One thing we know for certain is that it's going to shape the future. Our course is designed to be simple, free, and concise, giving you the tools you need to understand the underlying concepts of AI without feeling overwhelmed. We want to make AI accessible to everyone, especially students like us, and help you get started on your journey into the world of machine learning.</p>
+                <p>We're a team of high schoolers from the Bay Area with a passion for machine learning. One thing we
+                    know for certain is that it's going to shape the future. Our course is designed to be simple, free,
+                    and concise, giving you the tools you need to understand the underlying concepts of AI without
+                    feeling overwhelmed. We want to make AI accessible to everyone, especially students like us, and
+                    help you get started on your journey into the world of machine learning.</p>
             </div>
         </div>
 
         <div class="quadrant" data-animate="fade-up" id="requirements">
             <div class="about-text">
                 <h2>Who Can Apply?</h2>
-                <p>Students grades 6 and above</p>
-                <p>Have a good understanding of fundamental algebra concepts</p>
-                <p>Know the basics of Python and programming</p>
+                <ul>
+                    <li>Students grades 6 and above</li>
+                    <li>Have a good understanding of fundamental algebra concepts</li>
+                    <li>Know the basics of Python and programming</li>
+                </ul>
             </div>
         </div>
+
         <div class="quadrant" data-animate="fade-up" id="info">
             <div class="about-text">
                 <h2>Course Info</h2>
@@ -60,11 +71,12 @@
             </div>
         </div>
     </section>
-    
+
     <section id="register" class="register">
         <h1 id="register-header" data-animate="fade-up">Apply Here</h1>
         <div class="intro-text" data-animate="fade-up">
-            <p>Fill out the form below to register for our courses. We'll send you an email with a Google Form to complete the registration process.</p>
+            <p>Fill out the form below to register for our courses. We'll send you an email with a Google Form to
+                complete the registration process.</p>
         </div>
         <div class="course-register">
             <div class="available-courses" data-animate="fade-up">
@@ -108,21 +120,22 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contact" class="contact">
         <h2 data-animate="fade-up">Contact Us</h2>
-        <p data-animate="fade-up">If you have any questions or would like more information, please feel free to contact us.</p>
+        <p data-animate="fade-up">If you have any questions or would like more information, please feel free to contact
+            us.</p>
         <div class="contact-container">
             <form action="https://api.web3forms.com/submit" method="POST">
-                
+
                 <input type="hidden" name="access_key" value="0109f9a2-4fc0-4419-8909-04aea29aeeed">
-                
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
@@ -133,4 +146,5 @@
         </div>
     </section>
 </body>
+
 </html>
